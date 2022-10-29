@@ -3,16 +3,16 @@
 import request from '@/utils/request'
 
 // 导出接口方法
-export const registerAPI = () => {
+export const registerAPI = ({ username, password, repassword }) => {
   // 是一个 Promise 对象(内部包含原生 ajax 请求)
   // return 这个 Promise 对象到逻辑页面，去那边的对 Promise 对象提取结果
   return request({
     url: '/api/reg',
     method: 'POST',
     data: {
-      username: 'douying123',
-      password: '123321',
-      repassword: '123321'
+      username,
+      password,
+      repassword
     }
   })
 }
