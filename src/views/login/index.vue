@@ -63,6 +63,8 @@
               this.$message.success(res.message)
               // 将 token 字符串保存到 vuex 中
               this.updateToken(res.token)
+              // 登录成功之后，跳转到后台主页
+              this.$router.push('/')
             } else {
               // 登录失败
               return this.$message.error(res.message)
